@@ -1,0 +1,19 @@
+<nav id="navbar">
+
+
+    <nav class="navbar navbar-light bg-light">
+        <a href="/"><i class="em em-rooster"></i></a>
+
+        <form class="form-inline">
+            <button class="btn btn-secondary" type="button" width="400" height="400">Cluck!</button>
+            <% if (username) { %>
+            <%= `${username}` %>
+            <form action="/sign_out" method="POST">
+                <input type="submit" value="Sign Out" class="btn btn-danger">
+            </form>
+
+            <% } else { %>
+            <input type="button" value="Sign In" class="btn btn-secondary">
+            <% } %>
+        </form>
+    </nav>
