@@ -1,15 +1,16 @@
 <%- include("./partials/header") %>
-<h1>I hope this works!!!</h1>
-
-
-<form>
-    <div class="form-group">
-        <label for="usernameInput">Username</label>
-        <input type="username" class="form-control" id="inputUsername" aria-describedby="usernameHelp"
-            placeholder="e.g. Madam Welminster">
+<h1>Sign In</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <form action="/sign_in" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" id="inputUsername"
+                    placeholder="e.g. Madam Welminster">
+                <input type="submit" value="Log In" class="btn btn-outline-secondary">
+            </div>
+        </form>
     </div>
-    <button type="submit" class="btn btn-outline-secondary">Submit</button>
-</form>
-
+</div>
 
 <%- include("./partials/footer") %>

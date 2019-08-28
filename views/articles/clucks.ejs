@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+
+<h1>Clucks</h1>
+<% for (let i of clucks) {%>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card" width="100%">
+            <div class="card-body">
+                <img src="https://imgur.com/qM6KaEy.gif" class="rounded float-left" width="50">
+                <h5 class="card-title text-secondary"><%= `${i.username} • ${i.updatedAt}`%></h5>
+                <p class="card-text text-secondary"><%= i.content %>
+                </p>
+                <% if (i.image_url) { %>
+                <img src="<%= i.image_url %>" class="rounded float-left" height="200">
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<% }  %>
+
+<%- include("../partials/footer") %>
